@@ -18,10 +18,9 @@ class HomePage:
         self.button_getstarted = self.page.get_by_role("button", name="Get started")
 
     def navigate(self):
-        logger.info(f"Navigating to {self.url}")
         self.page.goto(self.url)
-        logger.info("Navigation completed")
-        print(f"Navigated to : {self.url}")
+        logger.info(f"Navigated to : {self.url}")
+     
 
     def _select_suggestion(self, pick_text: str | None = None):
         """Helper method to select a suggestion from the dropdown.
@@ -38,11 +37,9 @@ class HomePage:
         """Type an address into the origin field and choose a suggestion.        
         Args: address: The address string to type.
         """
-        logger.info(f"Filling origin with address: {address}")
         self.textbox_where_from.type(address)
         self._select_suggestion(address)
-        print(f"Origin Address filled: {address}")
-        logger.info("Origin filled successfully")
+        logger.info(f"Origin Address filled: {address}")
         
 
     def fill_destination(self, address: str):
@@ -52,7 +49,7 @@ class HomePage:
         """
         self.textbox_where_to.type(address)
         self._select_suggestion(address)
-        print(f"Destination Address filled: {address}")
+        logger.info(f"Destination Address filled: {address}")
 
     def select_trip_type(self, trip_type: str = "One way"):
         """Select the trip type from the dropdown.
@@ -64,13 +61,13 @@ class HomePage:
         self.button_trip_type.click()
         self.dropdown_trip_options_selector.get_by_text(trip_type).click()
         logger.info(f"Trip type '{trip_type}' selected")
-        print(f"Trip type '{trip_type}' selected")
+        
 
     def click_get_started(self):
         """Click the 'Get started' button to proceed."""
         self.button_getstarted.click()
         logger.info("'Get started' button clicked")
-        print("Get started button clicked")
+       
 
     def fill_address(self, origin: str, destination: str):
         """Convenience method to fill both origin and destination addresses.
@@ -92,7 +89,7 @@ class HomePage:
             destination: The destination address string to type.
             trip_type: The trip type to select (e.g., "One way", "Round trip").
         """
-        print(f"Starting booking with Origin: {origin}, Destination: {destination}, Trip Type: {trip_type}")
+        logger.info(f"Starting booking with Origin: {origin}, Destination: {destination}, Trip Type: {trip_type}")
         self.fill_address(origin, destination)
         self.select_trip_type(trip_type)
         self.click_get_started()

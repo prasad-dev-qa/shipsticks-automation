@@ -30,7 +30,6 @@ class ShipPage:
         # Wait for the dialog modal to appear (wait for attached since it may be hidden initially)
         self.page.get_by_role("dialog").wait_for(state="attached", timeout=2000)
         self.i_understand_button.wait_for()
-        logger.info("Clicking 'I understand' button")
         self.i_understand_button.click()
         logger.info("'I understand' button clicked")
                 
@@ -49,12 +48,10 @@ class ShipPage:
 
     def increase_golf_bags_count(self):
         """Click the button to increase the golf bags count."""
-        logger.info("Clicking 'Increase Golf Bags count' button")
-          # Scroll to the standard shipping button to ensure visibility
         self.increase_golf_bags_button.click()
         logger.info("'Increase Golf Bags count' button clicked")        
         self.scroll_to_element(self.select_date_button)
-        print("Clicked 'Increase Golf Bags count' button")
+        
 
     def select_standard_shipping(self):
         """Click the 'Standard' shipping option button."""
@@ -64,21 +61,17 @@ class ShipPage:
 
     def click_select_date(self):
         """Click the 'Please select a date' button to open the date picker."""
-        logger.info("Clicking 'Please select a date' button")
         self.select_date_button.click()
         logger.info("'Please select a date' button clicked")
-        print("Clicked 'Please select a date' button")
+        
 
     def click_date_arrow(self):
         """Click the arrow button in the date picker to navigate to the next month."""
-        logger.info("Clicking date picker arrow button to navigate to next month")
         self.date_arrow_button.click()
-        logger.info("Date picker arrow button clicked")
-          # Wait for the calendar to update after clicking
+        
 
     def select_ground_option(self):
         """Click the 'Ground' option."""
-        logger.info("Selecting 'Ground' option")
         self.ground_option.click()
         logger.info("'Ground' option selected")
 
@@ -112,7 +105,6 @@ class ShipPage:
 
     def click_next_traveler_details(self):
         """Click the 'Next: Traveler Details' button."""
-        logger.info("Clicking 'Next: Traveler Details' button")
         self.next_traveler_button.click()
         logger.info("'Next: Traveler Details' button clicked")
 
@@ -124,31 +116,28 @@ class ShipPage:
 
     def scroll_to_element(self, locator):
         """Scroll the page so that the specified locator is in view."""
-        logger.info(f"Scrolling to element: {locator}")
         locator.scroll_into_view_if_needed()
-        logger.info("Element scrolled into view")
-
+        
     def select_delivery_date(self, date_str: str):
         """Select a delivery date from the date picker.
         
         Args:
             date_str: The date string to select (e.g., "2024-07-15").
         """
-        logger.info(f"Selecting delivery date: {date_str}")
         # Implement logic to select the date based on the provided string
         self.click_select_date()
         self.click_date_arrow()  # Navigate to the next month if needed (this is just an example, you may need more complex logic)
         self.page.get_by_label(date_str).click()
+        logger.info(f"Delivery date '{date_str}' selected")
         self.scroll_to_element(self.ground_option)
         self.select_ground_option()
-        logger.info(f"Delivery date '{date_str}' selected")
-        print(f"Delivery date '{date_str}' selected")
+        
+        
 
     def click_shipping_label(self):
         """Click the 'Shipping' label to expand shipping details."""
-        logger.info("Clicking 'Shipping' label")
         self.shipping_label.click()
-        logger.info("'Shipping' label clicked")
+        
 
 
     def enter_shipping_details(self, delivery_date: str):

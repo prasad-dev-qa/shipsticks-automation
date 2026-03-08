@@ -1,45 +1,33 @@
-2026-03-08 13:42:54,499 - tests.test_step1_booking - INFO - Starting test: test_ship_sticks_booking_step_1_happy_path
-2026-03-08 13:42:54,500 - tests.test_step1_booking - INFO - Navigating to home page
-2026-03-08 13:42:54,501 - pages.home_page - INFO - Navigating to https://app.staging.shipsticks.com
-2026-03-08 13:43:00,058 - pages.home_page - INFO - Navigation completed
-2026-03-08 13:43:00,060 - tests.test_step1_booking - INFO - Filling address details
-2026-03-08 13:43:00,060 - pages.home_page - INFO - Filling origin with address: 1234 Main Street, Los Angeles, CA, USA
-2026-03-08 13:43:01,601 - pages.home_page - INFO - Origin filled successfully
-2026-03-08 13:43:03,049 - pages.home_page - INFO - Selecting trip type: One way
-2026-03-08 13:43:03,423 - pages.home_page - INFO - Trip type 'One way' selected
-2026-03-08 13:43:03,536 - pages.home_page - INFO - 'Get started' button clicked
-2026-03-08 13:43:03,536 - tests.test_step1_booking - INFO - Retrieving displayed addresses
-2026-03-08 13:43:03,536 - pages.ship_page - INFO - Retrieving shipping origin address
-2026-03-08 13:43:04,926 - pages.ship_page - INFO - Shipping origin: Los Angeles, CA
-2026-03-08 13:43:04,926 - pages.ship_page - INFO - Retrieving shipping destination address
-2026-03-08 13:43:04,944 - pages.ship_page - INFO - Shipping destination: Miami Lakes, FL
-2026-03-08 13:43:04,945 - tests.test_step1_booking - INFO - Performing assertions
-2026-03-08 13:43:04,945 - pages.ship_page - INFO - Waiting for modal dialog and 'I understand' button
-2026-03-08 13:43:05,859 - pages.ship_page - INFO - Clicking 'I understand' button
-2026-03-08 13:43:05,985 - pages.ship_page - INFO - 'I understand' button clicked
-2026-03-08 13:43:05,986 - pages.ship_page - INFO - Clicking 'Increase Golf Bags count' button
-2026-03-08 13:43:07,090 - pages.ship_page - INFO - 'Increase Golf Bags count' button clicked
-2026-03-08 13:43:07,091 - pages.ship_page - INFO - Scrolling to element: <Locator frame=<Frame name= url='https://www.app.staging.shipsticks.com/book/ship'> selector='internal:role=button[name="Please select a date"i]'>
-2026-03-08 13:43:07,163 - pages.ship_page - INFO - Element scrolled into view
-2026-03-08 13:43:07,163 - pages.ship_page - INFO - Selecting delivery date: April 8, 2026
-2026-03-08 13:43:07,163 - pages.ship_page - INFO - Clicking 'Please select a date' button
-2026-03-08 13:43:07,320 - pages.ship_page - INFO - 'Please select a date' button clicked
-2026-03-08 13:43:07,358 - pages.ship_page - INFO - Clicking date picker arrow button to navigate to next month
-2026-03-08 13:43:07,458 - pages.ship_page - INFO - Date picker arrow button clicked
-2026-03-08 13:43:07,614 - pages.ship_page - INFO - Scrolling to element: <Locator frame=<Frame name= url='https://www.app.staging.shipsticks.com/book/ship'> selector="//div[contains(@class, 'flex items-center justify-start bg-white')]/span[normalize-space()='Ground']">
-2026-03-08 13:43:12,170 - pages.ship_page - INFO - Element scrolled into view
-2026-03-08 13:43:12,171 - pages.ship_page - INFO - Selecting 'Ground' option
-2026-03-08 13:43:12,285 - pages.ship_page - INFO - 'Ground' option selected
-2026-03-08 13:43:12,285 - pages.ship_page - INFO - Delivery date 'April 8, 2026' selected
-2026-03-08 13:43:12,286 - pages.ship_page - INFO - Clicking 'Shipping' label
-2026-03-08 13:43:12,340 - pages.ship_page - INFO - 'Shipping' label clicked
-2026-03-08 13:43:12,341 - pages.ship_page - INFO - Retrieving shipment cities texts
-2026-03-08 13:43:12,360 - pages.ship_page - INFO - Shipment cities: ['Los Angeles, CA', 'Miami Lakes, FL']
-2026-03-08 13:43:12,383 - pages.ship_page - INFO - Retrieving payment summary items
-2026-03-08 13:43:12,397 - pages.ship_page - INFO - Payment summary items: ['Golf Bags #1 (Standard)', '$74.99']
-2026-03-08 13:43:12,397 - pages.ship_page - INFO - Retrieving total price
-2026-03-08 13:43:12,409 - pages.ship_page - INFO - Total price: $74.99
-2026-03-08 13:43:12,422 - pages.ship_page - INFO - Clicking 'Next: Traveler Details' button
-2026-03-08 13:43:12,616 - pages.ship_page - INFO - 'Next: Traveler Details' button clicked
-2026-03-08 13:43:12,617 - tests.test_step1_booking - INFO - Verifying checked icon visibility
-2026-03-08 13:43:13,517 - tests.test_step1_booking - INFO - Test completed successfully
+2026-03-08 15:20:46,578 - tests.test_step1_booking - INFO - Starting test: test_ship_sticks_booking_step_1_happy_path
+2026-03-08 15:20:52,762 - pages.home_page - INFO - Navigated to : https://app.staging.shipsticks.com
+2026-03-08 15:20:52,763 - pages.home_page - INFO - Starting booking with Origin: 1234 Main Street, Los Angeles, CA, USA, Destination: 4321 Main St, Miami Lakes, FL, USA, Trip Type: One way
+2026-03-08 15:20:55,476 - pages.home_page - INFO - Origin Address filled: 1234 Main Street, Los Angeles, CA, USA
+2026-03-08 15:20:57,124 - pages.home_page - INFO - Destination Address filled: 4321 Main St, Miami Lakes, FL, USA
+2026-03-08 15:20:57,125 - pages.home_page - INFO - Selecting trip type: One way
+2026-03-08 15:20:57,578 - pages.home_page - INFO - Trip type 'One way' selected
+2026-03-08 15:20:57,732 - pages.home_page - INFO - 'Get started' button clicked
+2026-03-08 15:20:57,733 - pages.ship_page - INFO - Retrieving shipping origin address
+2026-03-08 15:20:58,685 - pages.ship_page - INFO - Shipping origin: Los Angeles, CA
+2026-03-08 15:20:58,685 - pages.ship_page - INFO - Retrieving shipping destination address
+2026-03-08 15:20:58,694 - pages.ship_page - INFO - Shipping destination: Miami Lakes, FL
+2026-03-08 15:20:58,695 - tests.test_step1_booking - INFO - Origin assertion passed: 'Los Angeles, CA' is in '1234 Main Street, Los Angeles, CA, USA'
+2026-03-08 15:20:58,695 - tests.test_step1_booking - INFO - Destination assertion passed: 'Miami Lakes, FL' is in '4321 Main St, Miami Lakes, FL, USA'
+2026-03-08 15:20:58,696 - pages.ship_page - INFO - Waiting for modal dialog and 'I understand' button
+2026-03-08 15:20:59,186 - pages.ship_page - INFO - 'I understand' button clicked
+2026-03-08 15:20:59,493 - pages.ship_page - INFO - 'Increase Golf Bags count' button clicked
+2026-03-08 15:20:59,736 - pages.ship_page - INFO - 'Please select a date' button clicked
+2026-03-08 15:20:59,988 - pages.ship_page - INFO - Delivery date 'April 8, 2026' selected
+2026-03-08 15:21:04,610 - pages.ship_page - INFO - 'Ground' option selected
+2026-03-08 15:21:04,690 - pages.ship_page - INFO - Retrieving shipment cities texts
+2026-03-08 15:21:04,724 - pages.ship_page - INFO - Shipment cities: ['Los Angeles, CA', 'Miami Lakes, FL']
+2026-03-08 15:21:04,769 - tests.test_step1_booking - INFO - Shipment Cities from order summary assertion passed : ['Los Angeles, CA', 'Miami Lakes, FL']
+2026-03-08 15:21:04,771 - pages.ship_page - INFO - Retrieving payment summary items
+2026-03-08 15:21:04,793 - pages.ship_page - INFO - Payment summary items: ['Golf Bags #1 (Standard)', '$74.99']
+2026-03-08 15:21:04,793 - tests.test_step1_booking - INFO - Payment summary items assertion passed: ['Golf Bags #1 (Standard)', '$74.99']
+2026-03-08 15:21:04,794 - pages.ship_page - INFO - Retrieving total price
+2026-03-08 15:21:04,806 - pages.ship_page - INFO - Total price: $74.99
+2026-03-08 15:21:04,819 - tests.test_step1_booking - INFO - Total price assertion passed: $74.99
+2026-03-08 15:21:05,120 - pages.ship_page - INFO - 'Next: Traveler Details' button clicked
+2026-03-08 15:21:05,539 - tests.test_step1_booking - INFO - Step 1 booking completed green Checked icon visibility assertion passed
+2026-03-08 15:21:05,540 - tests.test_step1_booking - INFO - Step 1 booking flow completed successfully
+2026-03-08 15:21:05,540 - tests.test_step1_booking - INFO - Test completed successfully
