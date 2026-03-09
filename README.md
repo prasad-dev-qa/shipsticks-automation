@@ -63,7 +63,7 @@ playwright install
 playwright install
 
 ▶️ Running Tests
-pytest --html=reports/report.html --self-contained-html
+pytest --headed -s
 
 📊 Reports & Logs
 After execution, reports are generated under: /reports/report.html
